@@ -1,0 +1,176 @@
+h1 {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  color: #333;
+  margin-top:150px;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 1140px;
+  height: 400px;
+  overflow: hidden;
+  margin: 50px auto;
+}
+
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+
+.accordion ul li a {
+  display: block;
+  height: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 15px 20px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-family: Open Sans, sans-serif;
+  transition: all 200ms ease;
+}
+
+.accordion ul li a .accordion-content {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.accordion ul li a .accordion-content{
+  top: 50px;
+}
+
+.accordion ul li a .accordion-content h2 {
+  font-family: Montserrat, sans-serif;
+  text-overflow: ellipsis;
+  font-size: 38px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.accordion ul li a .accordion-content p {
+  display: block;
+  display: -webkit-box;
+  height: 60px;
+  margin: 0 auto;
+  font-size: 22px;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.accordion ul li a .accordion-content .btn-read-more{
+  width: 120px;
+  padding: 8px 12px;
+  border: 2px solid #fff;
+  background-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+
+.accordion ul li:nth-child(1) { background-image: url("../images/antelope-canyon.jpg"); }
+
+.accordion ul li:nth-child(2) { background-image: url("../images/banff-national-park.jpg"); }
+
+.accordion ul li:nth-child(3) { background-image: url("../images/denali-alaska.jpg"); }
+
+.accordion ul li:nth-child(4) { background-image: url("../images/cappadocia-turkey.jpg"); }
+
+.accordion ul li:nth-child(5) { background-image: url("../images/lake-tekapo-nz.jpg"); }
+
+.accordion ul li:nth-child(6) { background-image: url("../images/machu-picchu-peru.jpg"); }
+
+.accordion ul:hover li { width: 10%; }
+
+.accordion ul:hover li:hover { width: 60%; }
+
+.accordion ul:hover li:hover a { background: rgba(0, 0, 0, 0.4); }
+
+.accordion ul:hover li:hover a .accordion-content {
+  opacity: 1;
+  top: 150px;
+  -webkit-transition: all .4s ease .4s;
+  -o-transition: all .4s ease .4s;
+  transition: all .4s ease .4s;
+}
+
+@media screen and (max-width: 767px) {
+  
+  .accordion, .accordion ul li, .accordion ul li a{height: 250px;}
+  .accordion ul li a .accordion-content h2{font-size: 32px;}
+  .accordion ul li a .accordion-content p{font-size: 18px; height: 50px;}
+  .accordion ul:hover li:hover a .accordion-content{top:80px;}
+  .accordion ul li a{padding: 15px 10px;}
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .accordion ul li a .accordion-content h2{font-size: 24px;}
+  .accordion ul li a .accordion-content p{font-size: 14px; height: 40px;}
+  .accordion ul:hover li:hover a .accordion-content{top:80px;}
+}
+
+/*@media screen and (max-width: 600px) {
+
+  body { margin: 0; }
+
+  .accordion { height: auto; }
+
+  .accordion ul:hover li:hover a .accordion-content{
+    top: 70px;
+  }
+
+  .accordion ul li{
+    height: 250px;
+  }
+
+  .accordion ul li a{
+    height: 250px;
+  }
+
+  .accordion ul li a .accordion-content h2{
+    font-size: 32px;
+  }
+
+  .accordion ul li a .accordion-content p{
+    font-size: 16px;
+  }
+
+  .accordion ul li,
+  .accordion ul li:hover,
+  .accordion ul:hover li,
+  .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}*/
